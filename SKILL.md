@@ -5,6 +5,25 @@ description: Apply conservative project coding rules before editing source code.
 
 # Conservative Code Edits
 
+## 中文说明
+
+这是一个面向 Codex/AI 编程代理的保守代码修改守则 Skill。它适合在已有项目中进行代码、资源、配置、测试或文档修改时使用，目标是让代理尽量保持改动范围小、风格一致、风险可控。
+
+核心原则：
+
+- 使用最小必要改动完成任务。
+- 只修改与任务直接相关的文件。
+- 默认保持项目现有架构、交互逻辑、状态流转、模块职责、命名风格和实现模式。
+- 不做无关重构、格式化、优化或清理。
+- 修改公共基础代码前，先说明影响范围并等待确认。
+- 项目支持深色模式时，不新增硬编码固定 UI 色值，优先使用已有动态颜色资源或主题属性。
+
+优先级：
+
+1. 用户明确要求
+2. 项目硬性规则
+3. 编码原则
+
 ## Core Rules
 
 - Make the smallest necessary change that completes the task.
