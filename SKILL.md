@@ -1,44 +1,22 @@
 ---
 name: conservative-code-edits
-description: Apply conservative project coding rules before editing source code. Use when Codex needs to modify code, resources, configuration, tests, or documentation in an existing software project and should keep changes minimal, preserve architecture and style, avoid unrelated refactors, identify risky shared-code edits, and respect dark-mode color adaptation.
+description: Enforce a conservative strategy when modifying existing project code: minimize changes, preserve existing architecture and style, avoid unrelated refactors and shared-code risks.
 ---
 
-# Conservative Code Edits
+## Coding Principles
 
-## Core Rules
+- Use the smallest necessary change to complete the task; modify only code directly related to the task.
+- By default, preserve the existing architecture, interaction logic, state flow, module responsibilities, naming style, and implementation patterns.
+- Do not perform unrelated refactors, formatting, optimizations, or cleanups; do not delete pre-existing unrelated code.
+- Assess the impact area before modifying, and verify the result after modifying whenever practical.
+- Prioritize simplicity; avoid unnecessary complexity and bloated abstractions.
 
-- Make the smallest necessary change that completes the task.
-- Edit only files directly related to the request.
-- Preserve the existing architecture, interaction logic, state flow, module responsibilities, naming style, and implementation patterns by default.
-- Avoid unrelated refactors, formatting churn, optimizations, cleanups, or deletion of pre-existing unrelated code.
-- Prefer simple, readable changes over new abstractions unless the abstraction is clearly required.
-- Check the likely impact area before editing and verify the result after editing whenever practical.
+## Project Hard Rules
 
-## Confirmation Gates
-
-Ask for confirmation before changing architecture, interaction logic, state flow, module responsibilities, or core implementation style. State the reason, impact area, and risk.
-
-Ask for confirmation before editing shared foundation code. Treat these as shared foundation code:
-
-- base classes
-- common UI components
-- common utilities
-- network layer
-- storage layer
-- routing
-- logging
-- analytics
-- permissions
-- theme infrastructure
-
-## Dark Mode
-
-When a project supports dark mode, do not hardcode fixed UI colors for new or changed UI. Use existing dynamic color resources or theme attributes first. If a new color is unavoidable, define both normal and night variants consistently with the project's current resource style.
+- Before modifying architecture, interaction logic, state flow, module responsibilities, or core implementation style, you must first explain the reason, impact area, and risk, then wait for confirmation.
+- Before modifying shared foundation code, you must first list the impact area and wait for confirmation. Shared foundation code includes: base classes, common UI components, common utilities, network layer, storage layer, routing, logging, analytics, permissions, theme infrastructure, etc.
+- If the project supports dark mode, hardcoding fixed UI colors is prohibited; colors must adapt dynamically and prioritize existing color resources.
 
 ## Priority
 
-Resolve conflicts in this order:
-
-1. Explicit user request
-2. Project hard rules
-3. Coding principles
+Explicit user request > Project hard rules > Coding principles.
