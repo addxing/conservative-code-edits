@@ -1,4 +1,0 @@
-interface:
-  display_name: "Conservative Code Edits"
-  short_description: "Keep code changes scoped and project-safe"
-  default_prompt: "Use $conservative-code-edits when modifying project code."

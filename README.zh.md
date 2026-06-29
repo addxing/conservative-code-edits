@@ -2,7 +2,7 @@
 
 [![skills.sh](https://skills.sh/b/addxing/conservative-code-edits)](https://skills.sh/addxing/conservative-code-edits)
 
-面向 Codex/AI 编程代理的保守代码修改守则 Skill，用于约束代理在已有项目中进行最小必要改动，避免无关重构，保护公共基础代码，并在支持深色模式的项目中优先使用动态颜色资源。
+面向各类 AI 编程代理的保守代码修改守则 Skill，用于约束代理在已有项目中进行最小必要改动，避免无关重构，保护公共基础代码，并在支持深色模式的项目中优先使用动态颜色资源。
 
 ## 安装
 
@@ -12,7 +12,7 @@ npx skills add addxing/conservative-code-edits
 
 ## 使用方式
 
-安装后，在需要修改已有项目代码时，让 Codex 使用这个 Skill：
+安装后，在需要修改已有项目代码时，让你使用的 AI 编程工具应用这个 Skill：
 
 ```text
 Use $conservative-code-edits to make this UI change.
@@ -34,5 +34,4 @@ Use $conservative-code-edits to make this UI change.
 ## 文件说明
 
 - `SKILL.md` - Skill 指令
-- `agents/openai.yaml` - Codex UI 元数据
 - `LICENSE.txt` - Apache 2.0 许可证

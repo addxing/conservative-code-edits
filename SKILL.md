@@ -1,22 +1,21 @@
 ---
 name: conservative-code-edits
-description: Enforce a conservative strategy when modifying existing project code: minimize changes, preserve existing architecture and style, avoid unrelated refactors and shared-code risks.
+description: 修改现有项目代码时强制执行保守策略，最小化改动、保留既有架构与风格、规避无关重构及共享代码风险。
 ---
+## 编码原则
 
-## Coding Principles
+- 使用最小必要改动完成任务，只修改与任务直接相关的代码。
+- 默认保持现有架构、交互逻辑、状态流转、模块职责、命名风格和实现模式。
+- 不做无关重构、格式化、优化或清理；不删除改动前已存在的无关旧代码。
+- 修改前关注影响范围，修改后尽可能验证结果
+- 简洁优先，避免过度复杂、臃肿抽象
 
-- Use the smallest necessary change to complete the task; modify only code directly related to the task.
-- By default, preserve the existing architecture, interaction logic, state flow, module responsibilities, naming style, and implementation patterns.
-- Do not perform unrelated refactors, formatting, optimizations, or cleanups; do not delete pre-existing unrelated code.
-- Assess the impact area before modifying, and verify the result after modifying whenever practical.
-- Prioritize simplicity; avoid unnecessary complexity and bloated abstractions.
+## 项目硬性规则
 
-## Project Hard Rules
+- 如需修改架构、交互逻辑、状态流转、模块职责或核心实现风格，必须先说明原因、影响范围和风险，并等待确认。
+- 如需修改公共基础代码，必须先列出影响范围并等待确认。公共基础代码包括：基类、公共 UI 组件、公共工具类、网络层、存储层、路由、日志、埋点、权限、主题等。
+- 如果项目已支持深色模式，禁止硬编码固定 UI 颜色；颜色必须动态适配，并优先使用现有颜色资源
 
-- Before modifying architecture, interaction logic, state flow, module responsibilities, or core implementation style, you must first explain the reason, impact area, and risk, then wait for confirmation.
-- Before modifying shared foundation code, you must first list the impact area and wait for confirmation. Shared foundation code includes: base classes, common UI components, common utilities, network layer, storage layer, routing, logging, analytics, permissions, theme infrastructure, etc.
-- If the project supports dark mode, hardcoding fixed UI colors is prohibited; colors must adapt dynamically and prioritize existing color resources.
+## 优先级
 
-## Priority
-
-Explicit user request > Project hard rules > Coding principles.
+用户明确要求 > 项目硬性规则 > 编码原则。
