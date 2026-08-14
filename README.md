@@ -10,6 +10,20 @@ An agent skill for keeping code changes small, scoped, and project-safe. Works w
 npx skills add addxing/conservative-code-edits
 ```
 
+### DeepSeek Harness
+
+This repo follows the DeepSeek Harness (DSH) Skill format. Clone it into a skills directory and it will be auto-discovered:
+
+```bash
+# User-level install (available in all projects)
+git clone https://github.com/addxing/conservative-code-edits ~/.dsh/skills/conservative-code-edits
+
+# Project-level install (current project only)
+git clone https://github.com/addxing/conservative-code-edits .dsh/skills/conservative-code-edits
+```
+
+DSH hot-reloads the skills directory after cloning; the skill becomes available in new sessions.
+
 ## Usage
 
 After installing the skill, ask your AI coding tool to use it when changing code in an existing project:
