@@ -24,6 +24,13 @@ git clone https://github.com/addxing/conservative-code-edits .dsh/skills/conserv
 
 克隆后 DSH 会自动热更新技能目录，新会话即可使用该 Skill。
 
+也可以作为官方 bundle 插件一行安装（需要 pnpm，安装后重启 Web）：
+
+```bash
+dsh plugin --profile web add "github:addxing/conservative-code-edits#main"
+```
+
+
 ## 使用方式
 
 安装后，在需要修改已有项目代码时，让你使用的 AI 编程工具应用这个 Skill：

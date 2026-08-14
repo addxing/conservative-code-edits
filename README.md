@@ -24,6 +24,13 @@ git clone https://github.com/addxing/conservative-code-edits .dsh/skills/conserv
 
 DSH hot-reloads the skills directory after cloning; the skill becomes available in new sessions.
 
+Or install it as an official bundle plugin in one line (requires pnpm; restart the web app afterwards):
+
+```bash
+dsh plugin --profile web add "github:addxing/conservative-code-edits#main"
+```
+
+
 ## Usage
 
 After installing the skill, ask your AI coding tool to use it when changing code in an existing project:
