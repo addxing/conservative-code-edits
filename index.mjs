@@ -22,6 +22,7 @@ export function apply(ctx) {
   const disposer = ctx.skills.register({
     name: meta.name,
     description: meta.description,
+    source: 'bundled',
     content: fm[2].trim(),
   })
   ctx.on('dispose', disposer)
