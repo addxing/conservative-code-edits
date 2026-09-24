@@ -10,36 +10,17 @@
 npx skills add addxing/conservative-code-edits
 ```
 
-### DeepSeek Harness
-
-本仓库遵循 DeepSeek Harness（DSH）的 Skill 格式，克隆到技能目录后即可被自动发现：
-
-```bash
-# 用户级安装（所有项目可用）
-git clone https://github.com/addxing/conservative-code-edits ~/.dsh/skills/conservative-code-edits
-
-# 项目级安装（仅当前项目可用）
-git clone https://github.com/addxing/conservative-code-edits .dsh/skills/conservative-code-edits
-```
-
-克隆后 DSH 会自动热更新技能目录，新会话即可使用该 Skill。
-
-也可以作为官方 bundle 插件一行安装（需要 pnpm，安装后重启 Web）：
-
-```bash
-dsh plugin --profile web add "github:addxing/conservative-code-edits#main"
-```
-
-
 ## 使用方式
+
+通过所用工具的技能机制选择本技能，或在对话中按名称指定。具体调用语法和自动触发能力以所用工具为准。
 
 安装后，在需要修改已有项目代码时，让你使用的 AI 编程工具应用这个 Skill：
 
 ```text
-Use $conservative-code-edits to make this UI change.
+使用 conservative-code-edits 技能完成这次 UI 修改。
 ```
 
-当任务涉及修改项目代码、资源、配置、测试或文档时，也可以依赖 Skill 的自动触发。
+如果所用工具支持自动选择技能，涉及修改项目代码、资源、配置、测试或文档的任务也可能自动应用本技能。
 
 ## 功能说明
 
